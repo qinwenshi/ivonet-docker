@@ -1,6 +1,6 @@
 FROM ubuntu:17.04
 
-MAINTAINER IvoNet <webmaster@ivonet.nl>
+MAINTAINER Wen Shi <qinwen.shi@gmail.com>
 
 RUN apt-get update && \
     apt-get -y install apache2 git &&\
@@ -8,7 +8,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN cd /opt && \
-    git clone --depth=1 https://github.com/jonberenguer/draw.io.git && \
+    git clone --depth=1 https://github.com/qinwenshi/drawio.git && \
     rm -rf /var/www/html && \
     ln -s /opt/draw.io/war/ /var/www/html
 
